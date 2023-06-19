@@ -8,7 +8,7 @@
     </div>
   </section>
 
-  <!-- PULL DATA FROM WP API START-->
+  <!-- PULL POST DATA FROM WP API START-->
 
   <section id="" class="">
     <div class="container">
@@ -28,13 +28,44 @@
                                
                                 <h3 class="uk-card-title" routerLink="/blog/{{post.id}}" style="" [innerHTML]='post.title.rendered'></h3>
                                 <p class="" style="" [innerHTML]='post.excerpt.rendered'></p>
-                                <a routerLink="/blog/{{post.id}}" class="btn btn-primary mt-3" href="#contact">Read</a>
-                            </div>
-                            
-            </div>
+                                <a routerLink="/blog/{{post.id}}" class="btn btn-primary mt-3">Read</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
         </div>
-</div>
+    </div>
+</section>
+  <!-- PULL POST DATA FROM WP API END-->
+
+<!-- PULL WP PRODUCTS-->
+
+<section id="" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-5">
+                <h2 class="text-center"  data-aos="fade-down" style="font-size: 3rem;">Pulling Products from WP API</h2>
+            </div>
+                <div class="uk-child-width-1-3@m" uk-grid>
+                    <div *ngFor="let product of products"  data-aos="flip-up">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="{{product.images.src}}" width="1200" height="800" alt="">
+                            </div>
+                            <div class="uk-card-body text-left">
+                    
+                                <p class="mb-0" style="">{{product.date_created | date}}</p>
+                               
+                                <h3 class="uk-card-title" routerLink="/product/{{product.id}}" style="" [innerHTML]='product.name'></h3>
+                                <p class="" style="" [innerHTML]='product.description'></p>
+                                <p class="" style="" [innerHTML]='product.regular_price'></p>
+                                <a routerLink="/product/{{product.id}}" class="btn btn-primary mt-3">View</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 </section>
 
+<!-- PULL WP PRODUCTS END-->
