@@ -16,14 +16,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     //Get Posts from WP REST API
-    this.http.get('https://your_wordpress_url/wp-json/wp/v2/posts?_embed/').subscribe((data : any) =>{
+    this.http.get('http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/').subscribe((data : any) =>{
       //console.log(data);
       this.posts = data;
       console.log(this.posts);
     })
 
     // Get Products from WP REST API
-    this.http.get('https://your_wordpress_url/wordpress/wp-json/wc/v3/products?consumer_key=xxxxx&consumer_secret=xxxx').subscribe((data: any) =>{
+    this.http.get('http://localhost/webwarrior/wp-json/wc/v3/products?consumer_key=ck_xxxx&consumer_secret=cs_xxxx').subscribe((data: any) =>{
     //console.log(data);  
     this.products = data;
     console.log(this.products);
