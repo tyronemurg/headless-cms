@@ -21,10 +21,10 @@ export class BlogSingleComponent implements OnInit {
 
    let postid = this.route.snapshot.params['id'];
 
-    this.http.get(`http://your_wordpress_url/wp-json/wp/v2/posts/${postid}?_embed`).subscribe((data:any) =>{
-    console.log(data);
+    this.http.get(`https://your_wordpress_url/wp-json/wp/v2/posts/${postid}?_embed`).subscribe((data:any) =>{
+   // console.log(data);
     this.posts = data;
-    console.log(data);
+    //console.log(data);
     
   
   });
