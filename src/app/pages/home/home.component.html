@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 ">
-                <h1 class="text-dark text-center"  data-aos="zoom-in-down" style="font-size: 4rem;">HEADLESS CMS EXAMPLE</h1>
+                <h1 class="text-dark text-center"  data-aos="fade-in" style="font-size: 4rem;">HEADLESS CMS EXAMPLE</h1>
             </div>
         </div>
     </div>
@@ -14,13 +14,15 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12 mb-5">
-                <h2 class="text-center"  data-aos="fade-down" style="font-size: 3rem;">Pulling Posts from WP API</h2>
+                <h2 class="text-center"  data-aos="fade-in" style="font-size: 3rem;">Pulling Posts from WP API</h2>
             </div>
                 <div class="uk-child-width-1-3@m" uk-grid>
-                    <div *ngFor="let post of posts"  data-aos="flip-up">
+                    <div *ngFor="let post of posts"  data-aos="fade-in">
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{post.better_featured_image.source_url}}" width="1200" height="800" alt="">
+                                <div *ngFor="let image of post.images">
+                                    <img src="{{image.src}}" width="1200" height="800" alt="">
+                                </div>
                             </div>
                             <div class="uk-card-body text-left">
                     
@@ -47,10 +49,12 @@
                 <h2 class="text-center"  data-aos="fade-down" style="font-size: 3rem;">Pulling Products from WP API</h2>
             </div>
                 <div class="uk-child-width-1-3@m" uk-grid>
-                    <div *ngFor="let product of products"  data-aos="flip-up">
+                    <div *ngFor="let product of products"  data-aos="fade-in">
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{product.images.src}}" width="1200" height="800" alt="">
+                                <div *ngFor="let image of product.images">
+                                    <img src="{{image.src}}" width="1200" height="800" alt="">
+                                </div>
                             </div>
                             <div class="uk-card-body text-left">
                     
