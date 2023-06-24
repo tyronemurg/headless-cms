@@ -23,7 +23,7 @@ export class HomeComponent implements OnInit {
     })
 
     // Get Products from WP REST API
-    this.http.get('http://localhost/webwarrior/wp-json/wc/v3/products?consumer_key=ck_xxxx&consumer_secret=cs_xxxx').subscribe((data: any) =>{
+    this.http.get('https://localhost/webwarrior/wp-json/wc/v3/products?consumer_key=xxxx&consumer_secret=xxxx').subscribe((data: any) =>{
     //console.log(data);  
     this.products = data;
     console.log(this.products);
