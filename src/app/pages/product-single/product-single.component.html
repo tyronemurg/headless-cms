@@ -1,0 +1,16 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mt-5 mb-5">
+                <h1 class="text-dark" style="font-size:3rem!important;" [innerHTML]='products.name'></h1>
+                <p class="mb-0" style="">{{products.date_created | date}}</p>
+                 <div *ngFor="let image of products.images">
+                    <img src="{{image.src}}" width="1200" height="800" alt="">
+                </div> 
+                <p>R {{products.regular_price}}</p>
+     
+                  <p class="" style="" [innerHTML]='products.description'></p> 
+            </div>
+        </div>
+    </div>
+</section>
