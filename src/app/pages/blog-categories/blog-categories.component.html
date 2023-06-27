@@ -1,1 +1,31 @@
-<p>blog-categories works!</p>
+
+  <!-- PULL POST DATA FROM WP API START-->
+
+  <section id="" class="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 mb-5 mt-5">
+                <h2 class="text-center"  data-aos="fade-in" style="font-size: 3rem;">Mortal Kombat Posts By Category from WP API</h2>
+            </div>
+                <div class="uk-child-width-1-3@m" uk-grid>
+                    <div *ngFor="let post of posts"  data-aos="fade-in">
+                        <div class="uk-card uk-card-default">
+                            <div class="uk-card-media-top">
+                                <img src="{{post.better_featured_image.source_url}}" width="1200" height="800" alt="">
+                            </div>
+                            <div class="uk-card-body text-left">
+                    
+                                <p class="mb-0" style="">{{post.date | date}}</p>
+                               
+                                <h3 class="uk-card-title" routerLink="/blog/{{post.id}}" style="" [innerHTML]='post.title.rendered'></h3>
+                                <p class="" style="" [innerHTML]='post.excerpt.rendered'></p>
+                                <a routerLink="/blog/{{post.id}}" class="btn btn-primary mt-3">Read</a>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</section>
+  <!-- PULL POST DATA FROM WP API END-->
+
