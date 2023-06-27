@@ -9,6 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './partials/footer/footer.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { ProductSingleComponent } from './pages/product-single/product-single.component';
+import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProductSingleComponent } from './pages/product-single/product-single.co
     FooterComponent,
     BlogSingleComponent,
     ProductSingleComponent,
+    BlogCategoriesComponent,
   ],
   imports: [
     BrowserModule,
