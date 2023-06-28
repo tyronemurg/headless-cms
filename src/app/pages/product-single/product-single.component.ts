@@ -20,7 +20,7 @@ export class ProductSingleComponent implements OnInit {
 
     let productID = this.route.snapshot.params['id'];
 
-    this.http.get(`https://client-apps.co.za/wordpress/wp-json/wc/v3/products/${productID}?consumer_key=ck_effc4b5fb137d82f712ca6284a1805d466fde6af&consumer_secret=cs_f4c7b2883f65333689b136368cd84131ca6e9b5c`).subscribe((data:any) =>{
+    this.http.get(`http://localhost/webwarrior/wp-json/wc/v3/products/${productID}?consumer_key=xxx&consumer_secret=xxxx`).subscribe((data:any) =>{
    // console.log(data);
     this.products = data;
     //console.log(data);
