@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpParams } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Observable, of } from 'rxjs';
+import { catchError, tap } from 'rxjs/operators';
 import{EnvService} from '../services/env.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -14,4 +16,21 @@ export class WoocommerceService {
   getListOfProducts (): Observable<any> {
     return this.http.get<any>(this.env.PRODUCT_API_URL);
   }
+
+  getSingleProduct(id: any) {
+    return this.http.get(this.env.product_single_url + '/' + id + '?consumer_key=' + this.env.ck + '&consumer_secret=' + this.env.cs )
+      .pipe(
+        tap(products => console.log(products)),
+        catchError(this.handleError(`Get Products ID id=${id}`))
+      );
+  }
+
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
+ 
 }
