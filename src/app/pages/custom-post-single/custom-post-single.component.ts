@@ -19,6 +19,7 @@ export class CustomPostSingleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    //Get Single custom Post
     this.customPostsService.getSingleCustomPost(this.route.snapshot.params['id']).subscribe((data:any) =>{
       
       this.customPosts = data;

@@ -21,6 +21,7 @@ export class BlogSingleComponent implements OnInit {
 
   ngOnInit(): void {
 
+    //Get Single Post
     this.postsService.getSinglePost(this.route.snapshot.params['id']).subscribe((data:any) =>{
       
        this.posts = data;

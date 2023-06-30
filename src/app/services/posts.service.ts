@@ -9,31 +9,33 @@ import {EnvService} from '../services/env.service';
   providedIn: 'root'
 })
 export class PostsService {
-  private apiUrl = 'http://localhost/webwarrior/wp-json/wp/v2/posts';
-  private baseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
-  private postsUrl = `${this.baseUrl}/posts`;
+  // private apiUrl = 'http://localhost/webwarrior/wp-json/wp/v2/posts';
+  // private baseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
+  // private postsUrl = `${this.baseUrl}/posts`;
   posts: any;
   constructor(private http: HttpClient,private env: EnvService,) { }
 
+  // Get Posts with Pagination
   getPosts(page: number, perPage: number): Observable<any[]> {
     const params = new HttpParams()
       .set('_embed', '')
       .set('page', page.toString())
       .set('per_page', perPage.toString());
 
-    return this.http.get<any[]>(this.apiUrl, { params });
+    return this.http.get<any[]>(this.env.apiUrl, { params });
   }
-
+// Get Posts with Load more
   loadMorePosts(page: number, perPage: number): Observable<any[]> {
-    const url = `${this.postsUrl}?_embed&per_page=${perPage}&page=${page}`;
+    const url = `${this.env.postsUrl}?_embed&per_page=${perPage}&page=${page}`;
     return this.http.get<any[]>(url);
   }
 
-
+// Get Posts List
   getListOfPosts(): Observable<any> {
     return this.http.get<any>(this.env.post_url);
   }
 
+// Get Single Post
   getSinglePost(id: any) {
     return this.http.get(this.env.post_single_url + '/' + id + '?_embed' )
       .pipe(
@@ -42,6 +44,7 @@ export class PostsService {
       );
   }
 
+  // Error handle
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);

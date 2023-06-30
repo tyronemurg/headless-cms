@@ -11,11 +11,12 @@ export class WoocommerceService {
   //productsUrl = 'http://localhost/webwarrior/wp-json/wc/v3/products?consumer_key=xxxx&consumer_secret=xxxx';
   constructor(private http: HttpClient,private env: EnvService) { }
 
-
+// Get WC Product List
   getListOfProducts (): Observable<any> {
     return this.http.get<any>(this.env.PRODUCT_API_URL);
   }
 
+  // Get Single Product
   getSingleProduct(id: any) {
     return this.http.get(this.env.product_single_url + '/' + id + '?consumer_key=' + this.env.ck + '&consumer_secret=' + this.env.cs )
       .pipe(
@@ -24,6 +25,7 @@ export class WoocommerceService {
       );
   }
 
+  // Error handle
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
       console.error(error);
