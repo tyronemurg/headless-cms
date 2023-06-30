@@ -4,6 +4,9 @@ import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories.component';
 import { ProductSingleComponent } from './pages/product-single/product-single.component';
 import { HomeComponent } from './pages/home/home.component';
+import { PageinateComponent } from './pages/pageinate/pageinate.component';
+import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
+import { LoginComponent } from './pages/auth/login/login.component';
 
 const routes: Routes = [
 
@@ -22,6 +25,16 @@ const routes: Routes = [
   {
     path: 'blog-categories',
     component: BlogCategoriesComponent
+  },
+  {
+    path: 'custom-post/:id',
+    component: CustomPostSingleComponent
+  },
+  { path: 'pageinate', component: PageinateComponent },
+  { path: '', redirectTo: 'pageinate', pathMatch: 'full' },
+  {
+    path: 'login',
+    component: LoginComponent
   },
 
 ];

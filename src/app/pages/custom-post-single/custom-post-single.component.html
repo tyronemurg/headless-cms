@@ -1,0 +1,15 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 text-center mt-5 mb-5">
+                <h1 class="text-dark" style="font-size:3rem!important;" [innerHTML]='customPosts.title.rendered'></h1>
+                <p class="mb-0" style="">{{customPosts.date | date}}</p>
+                 <img src="{{customPosts.better_featured_image.source_url}}" style="width:100%" alt=""> 
+                <!-- <div *ngFor="let image of posts.images">
+                    <img src="{{image.src}}" width="1200" height="800" alt="">
+                </div> -->
+                <p class="" style="" [innerHTML]='customPosts.content.rendered'></p>   
+            </div>
+        </div>
+    </div>
+</section>

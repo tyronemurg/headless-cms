@@ -10,6 +10,10 @@ import { FooterComponent } from './partials/footer/footer.component';
 import { BlogSingleComponent } from './pages/blog-single/blog-single.component';
 import { ProductSingleComponent } from './pages/product-single/product-single.component';
 import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories.component';
+import { LoginComponent } from './pages/auth/login/login.component';
+import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
+import { PageinateComponent } from './pages/pageinate/pageinate.component';
+
 
 @NgModule({
   declarations: [
@@ -20,6 +24,9 @@ import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories
     BlogSingleComponent,
     ProductSingleComponent,
     BlogCategoriesComponent,
+    LoginComponent,
+    CustomPostSingleComponent,
+    PageinateComponent,
   ],
   imports: [
     BrowserModule,
