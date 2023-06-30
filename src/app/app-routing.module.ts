@@ -5,6 +5,8 @@ import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories
 import { ProductSingleComponent } from './pages/product-single/product-single.component';
 import { HomeComponent } from './pages/home/home.component';
 import { PageinateComponent } from './pages/pageinate/pageinate.component';
+import { LoadmoreComponent } from './pages/loadmore/loadmore.component';
+import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-onscroll.component';
 import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 
@@ -35,6 +37,14 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'loadmore',
+    component: LoadmoreComponent
+  },
+  {
+    path: 'loadmore-onscroll',
+    component: LoadmoreOnscrollComponent
   },
 
 ];

@@ -13,6 +13,8 @@ import { BlogCategoriesComponent } from './pages/blog-categories/blog-categories
 import { LoginComponent } from './pages/auth/login/login.component';
 import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
 import { PageinateComponent } from './pages/pageinate/pageinate.component';
+import { LoadmoreComponent } from './pages/loadmore/loadmore.component';
+import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-onscroll.component';
 
 
 @NgModule({
@@ -27,6 +29,8 @@ import { PageinateComponent } from './pages/pageinate/pageinate.component';
     LoginComponent,
     CustomPostSingleComponent,
     PageinateComponent,
+    LoadmoreComponent,
+    LoadmoreOnscrollComponent,
   ],
   imports: [
     BrowserModule,

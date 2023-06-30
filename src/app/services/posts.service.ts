@@ -10,6 +10,8 @@ import {EnvService} from '../services/env.service';
 })
 export class PostsService {
   private apiUrl = 'http://localhost/webwarrior/wp-json/wp/v2/posts';
+  private baseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
+  private postsUrl = `${this.baseUrl}/posts`;
   posts: any;
   constructor(private http: HttpClient,private env: EnvService,) { }
 
@@ -20,6 +22,11 @@ export class PostsService {
       .set('per_page', perPage.toString());
 
     return this.http.get<any[]>(this.apiUrl, { params });
+  }
+
+  loadMorePosts(page: number, perPage: number): Observable<any[]> {
+    const url = `${this.postsUrl}?_embed&per_page=${perPage}&page=${page}`;
+    return this.http.get<any[]>(url);
   }
 
 
