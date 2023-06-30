@@ -18,6 +18,9 @@ export class EnvService {
   baseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
   postsUrl = `${this.baseUrl}/posts`;
 
+  //Category
+  catApiUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
+
   // Custom post type and single
   custom_post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/books'
   custom_post_url = 'http://localhost/webwarrior/wp-json/wp/v2/books?_embed/'
