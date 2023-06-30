@@ -11,7 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class PageinateComponent implements OnInit {
   posts: any;
   currentPage = 1;
-  perPage = 3;
+  perPage = 12;
   totalPages: any;
   constructor(private postsService: PostsService,
     private route: ActivatedRoute,
@@ -20,7 +20,7 @@ export class PageinateComponent implements OnInit {
     ngOnInit(): void {
       this.route.queryParams.subscribe(params => {
         const page = params['page'];
-        this.currentPage = page ? parseInt(page, 10) : 1;
+        this.currentPage = page ? parseInt(page, 12) : 1;
         this.getPosts();
       });
     }
@@ -53,7 +53,7 @@ export class PageinateComponent implements OnInit {
     // }
   
     getPaginationRange(): number[] {
-      const rangeSize = 3;
+      const rangeSize = 12;
       const range = [];
       let start = this.currentPage - Math.floor(rangeSize / 2);
   
