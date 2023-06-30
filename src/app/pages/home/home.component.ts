@@ -52,6 +52,7 @@ export class HomeComponent implements OnInit {
 
   }
 
+  // Get Post List
   getListOfPosts(): void {
     this.postsService.getListOfPosts()
       .subscribe((data : any) =>{
@@ -60,7 +61,7 @@ export class HomeComponent implements OnInit {
         console.log(this.posts);
       });
   }
-
+  // Get Product List
   getListOfProducts(): void {
     this.woocommerceService.getListOfProducts()
       .subscribe((data : any) =>{
@@ -69,7 +70,7 @@ export class HomeComponent implements OnInit {
         console.log(this.products);
       });
   }
-
+  // Get Custom Post List
   getListOfCustomPosts(): void {
     this.customPostsService.getListOfCustomPosts()
       .subscribe((data : any) =>{
