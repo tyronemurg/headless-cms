@@ -2,8 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import{EnvService} from '../services/env.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {EnvService} from '../services/env.service';
 
 @Injectable({
   providedIn: 'root'

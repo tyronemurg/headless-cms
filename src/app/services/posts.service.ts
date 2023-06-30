@@ -1,19 +1,26 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
-import{EnvService} from '../services/env.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import {EnvService} from '../services/env.service';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class PostsService {
+  private apiUrl = 'http://localhost/webwarrior/wp-json/wp/v2/posts';
   posts: any;
-  //productsUrl = 'http://localhost/webwarrior/wp-json/wc/v3/products?consumer_key=xxxx&consumer_secret=xxxx';
-  constructor(private http: HttpClient,private env: EnvService,private router: Router,
-    private route: ActivatedRoute,) { }
+  constructor(private http: HttpClient,private env: EnvService,) { }
+
+  getPosts(page: number, perPage: number): Observable<any[]> {
+    const params = new HttpParams()
+      .set('_embed', '')
+      .set('page', page.toString())
+      .set('per_page', perPage.toString());
+
+    return this.http.get<any[]>(this.apiUrl, { params });
+  }
 
 
   getListOfPosts(): Observable<any> {
