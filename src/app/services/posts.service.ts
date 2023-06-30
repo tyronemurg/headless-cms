@@ -44,6 +44,11 @@ export class PostsService {
       );
   }
 
+  getPostsByCategory(categorySlug: string) {
+    const url = `${this.env.catApiUrl}/posts/?_embed/&categories=${categorySlug}`;
+    return this.http.get(url);
+  }
+
   // Error handle
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
