@@ -9,14 +9,6 @@ export class EnvService {
   post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
   post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed'
 
-  //  Simple blog post and single (with featured image plugin)
-  // post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
-  // post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/'
-
-  //Pagination first attempt
-  // pageinate_url_1 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=1&per_page=1'
-  // pageinate_url_2 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=2&per_page=1'
-
   // Load more & pagination posts testing
   apiUrl = 'http://localhost/webwarrior/wp-json/wp/v2/posts';
   baseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
@@ -36,5 +28,18 @@ export class EnvService {
   cs = 'cs_your_cosnumer_secret';
 
   PRODUCT_API_URL = `${this.products_base_url}consumer_key=${this.ck}&consumer_secret=${this.cs}`;
+
+    //Custom Fields
+  // customFieldbaseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
+  // customFieldpostsUrl = `${this.customFieldbaseUrl}/posts`;
+
+  //  Simple blog post and single (with featured image plugin)
+  // post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
+  // post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/'
+
+  //Pagination first attempt
+  // pageinate_url_1 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=1&per_page=1'
+  // pageinate_url_2 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=2&per_page=1'
+
   constructor() { }
 }

@@ -38,6 +38,10 @@ export class BlogSingleComponent implements OnInit {
 
 }
 
+getACFFields(acf: any): { key: string; value: any }[] {
+  return Object.keys(acf).map(key => ({ key, value: acf[key] }));
+}
+
 // Get the post featured image the proper way without plugin
 getFeaturedImage(post: any): string {
   console.log(post._embedded['wp:featuredmedia'][0].source_url);

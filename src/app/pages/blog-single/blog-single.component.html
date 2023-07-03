@@ -8,6 +8,29 @@
                  <!-- <img src="{{posts.better_featured_image.source_url}}" style="width:100%" alt="">  -->
                 <p class="" style="" [innerHTML]='post.content.rendered'></p>   
             </div>
+            <div class="col-sm-6 text-center mt-5 mb-5">
+                <div *ngIf="post.acf">
+                    <h3>Advanced Custom Fields:</h3>
+                   
+                      <div *ngFor="let field of getACFFields(post.acf)">
+                        {{ post.acf.custom_label }}
+                        <!-- {{ field.key }}: {{ field.value }} -->
+                      </div>
+                    
+                  </div>
+            </div>
+            <div class="col-sm-6 text-center mt-5 mb-5">
+                <div *ngIf="post._embedded['wp:term']">
+                    <h3>Categories:</h3>
+                    
+                      <div *ngFor="let category of post._embedded['wp:term'][0]">
+                        {{ category.name }}
+                      </div>
+                    
+                  </div>
+            </div>
+          
+           
         </div>
     </div>
 </section>

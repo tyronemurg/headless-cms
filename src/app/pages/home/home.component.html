@@ -29,6 +29,7 @@
                                
                                 <h3 class="uk-card-title" routerLink="/blog/{{post.id}}" style="" [innerHTML]='post.title.rendered'></h3>
                                 <p class="" style="" [innerHTML]='post.excerpt.rendered'></p>
+                                <!-- <p class="" style="" [innerHTML]='post.acf.custom_label'></p> -->
                                 <a routerLink="/blog/{{post.id}}" class="btn btn-primary mt-3">Read</a>
                             </div> 
                         </div>
@@ -104,3 +105,26 @@
     </div>
 </section>
   <!-- PULL CUSTOM POST DATA FROM WP API END-->
+
+
+  <!-- <div *ngFor="let post of posts">
+    <h2>{{ post.title.rendered }}</h2>
+    {{ post.content.rendered }}
+    <div *ngIf="post._embedded['wp:term']">
+      <h3>Categories:</h3>
+      <ul>
+        <li *ngFor="let category of post._embedded['wp:term'][0]">
+          {{ category.name }}
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="post.acf">
+        <h3>Advanced Custom Fields:</h3>
+        <ul>
+          <li *ngFor="let field of getACFFields(post.acf)">
+            {{ field.key }}: {{ field.value }}
+          </li>
+        </ul>
+      </div>
+    <hr />
+  </div> -->

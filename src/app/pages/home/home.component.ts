@@ -5,7 +5,6 @@ import{WoocommerceService} from '../../services/woocommerce.service';
 import{PostsService} from '../../services/posts.service';
 import{CustomPostsService} from '../../services/custom-posts.service';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -60,6 +59,10 @@ export class HomeComponent implements OnInit {
         this.posts = data;
         console.log(this.posts);
       });
+  }
+
+  getACFFields(acf: any): { key: string; value: any }[] {
+    return Object.keys(acf).map(key => ({ key, value: acf[key] }));
   }
 
   // Get the post featured image  proper way(without using the plugin)

@@ -44,6 +44,7 @@ export class PostsService {
       );
   }
 
+  // Get Posts by Category
   getPostsByCategory(categorySlug: string) {
     const url = `${this.env.catApiUrl}/posts/?_embed/&categories=${categorySlug}`;
     return this.http.get(url);
@@ -57,5 +58,15 @@ export class PostsService {
       return of(result as T);
     };
   }
+
+  // getCustomFields(postId: number): Observable<any> {
+  //   const url = `${this.env.baseUrl}/posts/${postId}/acf`;
+  //   return this.http.get<any>(url);
+  // }
+
+  // getPostWithCustomFields(postId: number): Observable<any> {
+  //   const url = `${this.env.customFieldbaseUrl}/posts/${postId}?_embed=true`;
+  //   return this.http.get<any>(url);
+  // }
   
 }
