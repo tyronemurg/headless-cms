@@ -10,6 +10,27 @@
                 </div> -->
                 <p class="" style="" [innerHTML]='customPosts.content.rendered'></p>   
             </div>
+            <div class="col-sm-6 text-center mt-5 mb-5">
+                <div *ngIf="customPosts.acf">
+                    <h3>Advanced Custom Fields:</h3>
+                   
+                      <div *ngFor="let field of getACFFields(customPosts.acf)">
+                        {{ customPosts.acf.custom_label }}
+                        <!-- {{ field.key }}: {{ field.value }} -->
+                      </div>
+                    
+                  </div>
+            </div>
+            <div class="col-sm-6 text-center mt-5 mb-5">
+                <div *ngIf="customPosts._embedded['wp:term']">
+                    <h3>Categories:</h3>
+                    
+                      <div *ngFor="let category of customPosts._embedded['wp:term'][0]">
+                        {{ category.name }}
+                      </div>
+                    
+                  </div>
+            </div>
         </div>
     </div>
 </section>
