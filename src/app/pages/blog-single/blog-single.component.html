@@ -2,13 +2,11 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12 text-center mt-5 mb-5">
-                <h1 class="text-dark" style="font-size:3rem!important;" [innerHTML]='posts.title.rendered'></h1>
-                <p class="mb-0" style="">{{posts.date | date}}</p>
-                 <img src="{{posts.better_featured_image.source_url}}" style="width:100%" alt=""> 
-                <!-- <div *ngFor="let image of posts.images">
-                    <img src="{{image.src}}" width="1200" height="800" alt="">
-                </div> -->
-                <p class="" style="" [innerHTML]='posts.content.rendered'></p>   
+                <h1 class="text-dark" style="font-size:3rem!important;" [innerHTML]='post.title.rendered'></h1>
+                <p class="mb-0" style="">{{post.date | date}}</p>
+                <img [src]="getFeaturedImage(post)" alt="Featured Image">
+                 <!-- <img src="{{posts.better_featured_image.source_url}}" style="width:100%" alt="">  -->
+                <p class="" style="" [innerHTML]='post.content.rendered'></p>   
             </div>
         </div>
     </div>

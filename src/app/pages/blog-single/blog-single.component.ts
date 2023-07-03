@@ -10,7 +10,7 @@ import{PostsService} from '../../services/posts.service';
 })
 export class BlogSingleComponent implements OnInit {
   id: any;
-  posts: any;
+  post: any;
   images: any;
   constructor(
     private router: Router,
@@ -22,26 +22,29 @@ export class BlogSingleComponent implements OnInit {
   ngOnInit(): void {
 
     //Get Single Post
-    this.postsService.getSinglePost(this.route.snapshot.params['id']).subscribe((data:any) =>{
+    const postId = +this.route.snapshot.params['id'];
+    this.postsService.getSinglePost(postId).subscribe((data:any) =>{
       
-       this.posts = data;
-       // console.log(this.posts);
+    this.post = data;
+    console.log(this.post);
      });
+     
+    //let postid = this.route.snapshot.params['id'];
+    //this.http.get(`http://localhost/webwarrior/wp-json/wp/v2/posts/${postid}?_embed`).subscribe((data:any) =>{
+    //console.log(data);
+    //this.posts = data;
+    //console.log(data);
+    // });
 
-  //  let postid = this.route.snapshot.params['id'];
-  //   this.http.get(`http://localhost/webwarrior/wp-json/wp/v2/posts/${postid}?_embed`).subscribe((data:any) =>{
-  //  // console.log(data);
-  //   this.posts = data;
-  //   //console.log(data);
-    
-  
-  // });
+}
+
+// Get the post featured image the proper way without plugin
+getFeaturedImage(post: any): string {
+  console.log(post._embedded['wp:featuredmedia'][0].source_url);
+  return post._embedded['wp:featuredmedia'][0].source_url;
 }
 
 ionViewDidEnter() {
-
-
-
 }
 
 }
