@@ -27,4 +27,8 @@ export class CustomPostSingleComponent implements OnInit {
     });
   }
 
+  getACFFields(acf: any): { key: string; value: any }[] {
+    return Object.keys(acf).map(key => ({ key, value: acf[key] }));
+  }
+
 }
