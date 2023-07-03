@@ -5,9 +5,13 @@ import { Injectable } from '@angular/core';
 })
 export class EnvService {
 
-  //  Simple blog post and single
+  //  Simple blog post and single (without better featured image plugin)
   post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
-  post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/'
+  post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed'
+
+  //  Simple blog post and single (with featured image plugin)
+  // post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
+  // post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/'
 
   //Pagination first attempt
   // pageinate_url_1 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=1&per_page=1'

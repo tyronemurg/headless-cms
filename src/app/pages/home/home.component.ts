@@ -61,6 +61,12 @@ export class HomeComponent implements OnInit {
         console.log(this.posts);
       });
   }
+
+  // Get the post featured image  proper way(without using the plugin)
+  getFeaturedImage(post: any): string {
+    //console.log(post._embedded['wp:featuredmedia'][0].source_url);
+    return post._embedded['wp:featuredmedia'][0].source_url;
+  }
   // Get Product List
   getListOfProducts(): void {
     this.woocommerceService.getListOfProducts()
@@ -79,6 +85,7 @@ export class HomeComponent implements OnInit {
         console.log(this.customPosts);
       });
   }
+
   
 
 }
