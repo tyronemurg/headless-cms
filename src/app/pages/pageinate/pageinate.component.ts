@@ -32,6 +32,12 @@ export class PageinateComponent implements OnInit {
       });
     }
 
+    // Get the post featured image  proper way(without using the plugin)
+  getFeaturedImage(post: any): string {
+    //console.log(post._embedded['wp:featuredmedia'][0].source_url);
+    return post._embedded['wp:featuredmedia'][0].source_url;
+  }
+
     goToPage(page: number): void {
      
         this.router.navigate([], {

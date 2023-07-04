@@ -70,6 +70,11 @@ export class HomeComponent implements OnInit {
     //console.log(post._embedded['wp:featuredmedia'][0].source_url);
     return post._embedded['wp:featuredmedia'][0].source_url;
   }
+  // Get the post featured image  proper way(without using the plugin)
+  getCustomPostFeaturedImage(customPost: any): string {
+    //console.log(post._embedded['wp:featuredmedia'][0].source_url);
+    return customPost._embedded['wp:featuredmedia'][0].source_url;
+  }
   // Get Product List
   getListOfProducts(): void {
     this.woocommerceService.getListOfProducts()

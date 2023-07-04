@@ -88,7 +88,8 @@
                     <div *ngFor="let customPost of customPosts"  data-aos="fade-in">
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
-                                <img src="{{customPost.better_featured_image.source_url}}" width="1200" height="800" alt="">
+                                <img [src]="getCustomPostFeaturedImage(customPost)" alt="Featured Image">
+                                <!-- <img src="{{customPost.better_featured_image.source_url}}" width="1200" height="800" alt=""> -->
                             </div>
                             <div class="uk-card-body text-left">
                     
