@@ -27,6 +27,12 @@ export class LoadmoreOnscrollComponent implements OnInit {
     });
   }
 
+  // Get the post featured image  proper way(without using the plugin)
+  getFeaturedImage(post: any): string {
+    //console.log(post._embedded['wp:featuredmedia'][0].source_url);
+    return post._embedded['wp:featuredmedia'][0].source_url;
+  }
+
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: any) {
     const windowHeight = 'innerHeight' in window ? window.innerHeight : document.documentElement.offsetHeight;

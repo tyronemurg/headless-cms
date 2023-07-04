@@ -27,6 +27,12 @@ export class CustomPostSingleComponent implements OnInit {
     });
   }
 
+  // Get the post featured image the proper way without plugin
+getFeaturedImage(customPosts: any): string {
+  console.log(customPosts._embedded['wp:featuredmedia'][0].source_url);
+  return customPosts._embedded['wp:featuredmedia'][0].source_url;
+}
+
   getACFFields(acf: any): { key: string; value: any }[] {
     return Object.keys(acf).map(key => ({ key, value: acf[key] }));
   }

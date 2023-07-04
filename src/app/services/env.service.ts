@@ -17,9 +17,9 @@ export class EnvService {
   //Category
   catApiUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
 
-  // Custom post type and single
-  custom_post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/books'
-  custom_post_url = 'http://localhost/webwarrior/wp-json/wp/v2/books?_embed/'
+    // Custom post type and single (proper featured image way without plugin)
+    custom_post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/books'
+    custom_post_url = 'http://localhost/webwarrior/wp-json/wp/v2/books?_embed'
 
   // Woocommerce products and single with keys
   product_single_url = 'http://localhost/webwarrior/wp-json/wc/v3/products'
@@ -29,13 +29,17 @@ export class EnvService {
 
   PRODUCT_API_URL = `${this.products_base_url}consumer_key=${this.ck}&consumer_secret=${this.cs}`;
 
-    //Custom Fields
+  //Custom Fields
   // customFieldbaseUrl = 'http://localhost/webwarrior/wp-json/wp/v2';
   // customFieldpostsUrl = `${this.customFieldbaseUrl}/posts`;
 
   //  Simple blog post and single (with featured image plugin)
   // post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts'
   // post_url = 'http://localhost/webwarrior/wp-json/wp/v2/posts?_embed/'
+
+  // Custom post type and single (plugin for featured image)
+  // custom_post_single_url = 'http://localhost/webwarrior/wp-json/wp/v2/books'
+  // custom_post_url = 'http://localhost/webwarrior/wp-json/wp/v2/books?_embed/'
 
   //Pagination first attempt
   // pageinate_url_1 = 'http://localhost/webwarrior/wp-json/wp/v2/posts?page=1&per_page=1'
