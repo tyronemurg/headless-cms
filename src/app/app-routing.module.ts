@@ -9,12 +9,17 @@ import { LoadmoreComponent } from './pages/loadmore/loadmore.component';
 import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-onscroll.component';
 import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
 import { LoginComponent } from './pages/auth/login/login.component';
+import { SampleComponent } from './pages/sample/sample.component';
 
 const routes: Routes = [
 
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'sample',
+    component: SampleComponent
   },
   {
     path: 'blog/:id',
@@ -32,8 +37,15 @@ const routes: Routes = [
     path: 'custom-post/:id',
     component: CustomPostSingleComponent
   },
-  { path: 'pageinate', component: PageinateComponent },
-  { path: '', redirectTo: 'pageinate', pathMatch: 'full' },
+  { 
+    path: 'pageinate', 
+    component: PageinateComponent 
+  },
+  { 
+    path: '', 
+    redirectTo: 'pageinate', 
+    pathMatch: 'full' 
+  },
   {
     path: 'login',
     component: LoginComponent
