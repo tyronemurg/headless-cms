@@ -15,6 +15,7 @@ import { CustomPostSingleComponent } from './pages/custom-post-single/custom-pos
 import { PageinateComponent } from './pages/pageinate/pageinate.component';
 import { LoadmoreComponent } from './pages/loadmore/loadmore.component';
 import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-onscroll.component';
+import { SampleComponent } from './pages/sample/sample.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-on
     PageinateComponent,
     LoadmoreComponent,
     LoadmoreOnscrollComponent,
+    SampleComponent,
   ],
   imports: [
     BrowserModule,
