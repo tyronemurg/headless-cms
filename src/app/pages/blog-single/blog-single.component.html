@@ -11,11 +11,11 @@
             <div class="col-sm-6 text-center mt-5 mb-5">
                 <div *ngIf="post.acf">
                     <h3>Advanced Custom Fields:</h3>
-                   
-                      <div *ngFor="let field of getACFFields(post.acf)">
+                    <p class="" style="" [innerHTML]='post.acf.custom_label '></p>   
+                      <!-- <div *ngFor="let field of getACFFields(post.acf)">
                         {{ post.acf.custom_label }}
-                        <!-- {{ field.key }}: {{ field.value }} -->
-                      </div>
+                         {{ field.key }}: {{ field.value }} 
+                      </div> -->
                     
                   </div>
             </div>

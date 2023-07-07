@@ -14,11 +14,8 @@
             <div class="col-sm-6 text-center mt-5 mb-5">
                 <div *ngIf="customPosts.acf">
                     <h3>Advanced Custom Fields:</h3>
-                   
-                      <div *ngFor="let field of getACFFields(customPosts.acf)">
-                        {{ customPosts.acf.custom_label }}
-                        <!-- {{ field.key }}: {{ field.value }} -->
-                      </div>
+                    <p class="" style="" [innerHTML]='customPosts.acf.custom_label'></p>  
+                  
                     
                   </div>
             </div>
