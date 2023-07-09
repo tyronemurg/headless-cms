@@ -1,5 +1,5 @@
 {
-  "name": "lp",
+  "name": "headless-cms",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
