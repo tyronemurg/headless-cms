@@ -1,15 +1,50 @@
-<div *ngIf="wordpressContent" class="text-center">
+<section class="p-0">
+    <div class="container-fluid p-0">
+        <div *ngIf="wordpressContent" class="text-center">
     
-    <div *ngIf="wordpressContent.acf">
-        <div id="" class="dynamic-bg" 
-        [ngStyle]="{'background-image': 'url(' + wordpressContent.acf.custom_banner + ')'}">
-            <div style="padding-top:150px;">
+            <div *ngIf="wordpressContent.acf">
+        
+                <header class="mb-5" style="">
+                    <div class="overlay"></div>
+                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                      <source src="{{wordpressContent.acf.video_url }}" type="video/mp4">
+                    </video>
+                    <div class="container h-100">
+                      <div class="d-flex h-100 text-center align-items-center">
+                        <div class="w-100 z-2">
+                            <h1 class="text-white">{{ wordpressContent.title.rendered }}</h1>
+                            <div class="text-white" [innerHTML]="wordpressContent.content.rendered"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </header>
+
+                  
+                <div id="" class="dynamic-bg mt-5 mb-5" [ngStyle]="{'background-image': 'url(' + wordpressContent.acf.custom_banner + ')'}">
+                <div style="padding-top:150px;">
                 <div style="background: #0000003b;;">
                     <h1 class="text-white">{{ wordpressContent.title.rendered }}</h1>
                 <div class="text-white" [innerHTML]="wordpressContent.content.rendered"></div>
                 </div>
             </div>
         </div>
+    
+              </div>
+         
+          </div>   
+        
+    </div>
+</section>
+
+
+<section>
+
+    <div class="container">
+        
+<div *ngIf="wordpressContent" class="text-center">
+    
+    <div *ngIf="wordpressContent.acf">
+
         <!-- <img [src]="wordpressContent.acf.custom_banner" alt="Featured Image"> -->
         <!-- <h3>Advanced Custom Fields:</h3> -->
         <div class="container mt-5">
@@ -31,3 +66,6 @@
   <div *ngIf="!wordpressContent" class="text-center">
     <p>Loading WordPress content...</p>
   </div>
+
+    </div>
+</section>
