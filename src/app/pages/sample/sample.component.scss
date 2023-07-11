@@ -11,8 +11,7 @@ header{
     min-height: 25rem;
     width: 100%;
     overflow: hidden;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+
 }
 
 header video {
@@ -36,7 +35,7 @@ header .overlay {
     left: 0;
     height: 100%;
     width: 100%;
-    /* background-color: black; */
+    background-color: #0000002e; 
     // background: -moz-linear-gradient(right, #00BFFF 0%,#00bfff 50%,#00bfffc7 58%,#00bfff36 100%);
     // background: -webkit-linear-gradient(right, #00BFFF 0%,#00bfff 50%,#00bfffc7 58%,#00bfff36 100%);
     // background: linear-gradient(to right, #00BFFF 0%,#00bfff 50%,#00bfffc7 58%,#00bfff36 100%);
