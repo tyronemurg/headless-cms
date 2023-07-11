@@ -6,17 +6,17 @@
         
                 <header class="mb-5" style="">
                     <div class="overlay"></div>
-                    <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    <video playsinline autoplay muted controls [muted]="'muted'" loop>
                       <source src="{{wordpressContent.acf.video_url }}" type="video/mp4">
                     </video>
-                    <div class="container h-100">
+                    <!-- <div class="container h-100">
                       <div class="d-flex h-100 text-center align-items-center">
                         <div class="w-100 z-2">
                             <h1 class="text-white">{{ wordpressContent.title.rendered }}</h1>
                             <div class="text-white" [innerHTML]="wordpressContent.content.rendered"></div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </header>
 
                   
