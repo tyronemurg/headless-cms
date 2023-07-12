@@ -11,6 +11,15 @@ import{CustomPostsService} from '../../services/custom-posts.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+  hoverCard() {
+    const cardElement = document.querySelector('.card-inner');
+    cardElement?.classList.add('hover');
+  }
+
+  unhoverCard() {
+    const cardElement = document.querySelector('.card-inner');
+    cardElement?.classList.remove('hover');
+  }
   posts: any;
   customPosts: any;
   products: any;
