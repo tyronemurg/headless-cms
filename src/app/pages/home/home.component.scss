@@ -1,0 +1,94 @@
+.card {
+    width: 300px;
+    height: 400px;
+    perspective: 800px;
+    position: relative;
+    border: 0px solid rgba(0,0,0,.125);
+    margin:auto;
+    background: #000;
+    border-radius: 1.25rem!important;
+    
+  
+  }
+
+  .img-front{
+    border-radius: 1.25rem;
+  }
+ .card:hover .img-front{
+    filter: grayscale(1) brightness(0.5);
+  }
+  .card:hover{
+
+    filter: drop-shadow(0px 160px 0px rgba(0, 0, 0, 0)) drop-shadow(0px 40px 25px rgba(0, 0, 0, 0.11)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1)) drop-shadow(0px 40px 10px rgba(0, 0, 0, 0.4)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1)) drop-shadow(0px 15px 8px rgba(0, 0, 0, 0.1))!important;
+   cursor: pointer;
+}
+  
+  .card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    
+  }
+  
+  .card-front,
+  .card-back,
+  .card-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    
+  }
+  
+  .card-front {
+    transform: rotateY(0deg);
+    z-index: 2;
+    border-radius: 1.25rem !important;
+  }
+  
+  .card-back {
+    transform: rotateY(180deg);
+    z-index: 1;
+    opacity: 0;
+  }
+  
+  .card-overlay {
+    transform: rotateY(0deg);
+    z-index: 3;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+    transform-origin: center;
+  }
+  
+  .card:hover .card-inner {
+     
+    transform: rotateX(10deg);
+  }
+
+  .card:hover .card-front {
+    background:#000;
+  }
+  
+  .card:hover .card-back {
+    opacity: 1;
+  }
+  
+  .card:hover .card-overlay {
+    opacity: 1;
+    transform: translateZ(0px) scale(1.2);
+    
+   
+  }
+
+  .card:hover #card-overlay-custom {
+    opacity: 1;
+    transform: translateX(-10px) translateY(-20px) scale(1.4);
+    // transform: translateX(-35px) translateY(1px) scale(1.2);
+    // transform: translateX(-28px) translateY(-28px) scale(1.36);
+    
+   
+  }
