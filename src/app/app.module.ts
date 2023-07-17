@@ -16,6 +16,9 @@ import { PageinateComponent } from './pages/pageinate/pageinate.component';
 import { LoadmoreComponent } from './pages/loadmore/loadmore.component';
 import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-onscroll.component';
 import { SampleComponent } from './pages/sample/sample.component';
+import { GravityFormComponent } from './pages/gravity-form/gravity-form.component';
+import { FormsModule } from '@angular/forms';
+import { SidebarComponent } from './partials/sidebar/sidebar.component'; 
 
 
 @NgModule({
@@ -33,11 +36,14 @@ import { SampleComponent } from './pages/sample/sample.component';
     LoadmoreComponent,
     LoadmoreOnscrollComponent,
     SampleComponent,
+    GravityFormComponent,
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

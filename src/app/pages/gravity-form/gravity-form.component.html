@@ -1,0 +1,10 @@
+<form (ngSubmit)="onSubmit()">
+    <div>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" [(ngModel)]="formData.name" required>
+    </div>
+
+    <!-- Add more form fields here -->
+  
+    <button type="submit">Submit</button>
+  </form>

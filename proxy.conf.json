@@ -1,0 +1,7 @@
+{
+    "/api": {
+      "target": "https://your-gravity-form-url.com",
+      "secure": false,
+      "changeOrigin": true
+    }
+  }
