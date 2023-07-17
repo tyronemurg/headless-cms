@@ -10,6 +10,7 @@ import { LoadmoreOnscrollComponent } from './pages/loadmore-onscroll/loadmore-on
 import { CustomPostSingleComponent } from './pages/custom-post-single/custom-post-single.component';
 import { LoginComponent } from './pages/auth/login/login.component';
 import { SampleComponent } from './pages/sample/sample.component';
+import { GravityFormComponent } from './pages/gravity-form/gravity-form.component';
 
 const routes: Routes = [
 
@@ -58,11 +59,15 @@ const routes: Routes = [
     path: 'loadmore-onscroll',
     component: LoadmoreOnscrollComponent
   },
+  {
+    path: 'gravity-form',
+    component: GravityFormComponent
+  },
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true,scrollPositionRestoration: 'enabled',
+  imports: [RouterModule.forRoot(routes, {useHash: false,scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
   onSameUrlNavigation: 'reload',
   scrollOffset: [50, 50],
