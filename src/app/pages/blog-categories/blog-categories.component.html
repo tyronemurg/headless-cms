@@ -8,7 +8,7 @@
                 <h2 class="text-center"  data-aos="fade-in" style="font-size: 3rem;">Mortal Kombat Posts By Category from WP API</h2>
             </div>
                 <div class="uk-child-width-1-3@m" uk-grid>
-                    <div *ngFor="let post of posts"  data-aos="fade-in">
+                    <div *ngFor="let post of posts"  data-aos="fade-in" class="d-flex">
                         <div class="uk-card uk-card-default">
                             <div class="uk-card-media-top">
                                 <img src="{{post.better_featured_image.source_url}}" width="1200" height="800" alt="">
