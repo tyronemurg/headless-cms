@@ -11,7 +11,7 @@
                     <h2 class="text-center"  data-aos="fade-in" style="font-size: 3rem;">Load More Posts On Scroll From WP API</h2>
                 </div>
                     <div class="uk-child-width-1-3@m" uk-grid>
-                        <div *ngFor="let post of posts"  data-aos="fade-in">
+                        <div *ngFor="let post of posts"  data-aos="fade-in" class="d-flex">
                             <div class="uk-card uk-card-default">
                                 <div class="uk-card-media-top">
                                     <img [src]="getFeaturedImage(post)" alt="Featured Image">
