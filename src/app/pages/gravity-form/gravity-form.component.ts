@@ -20,18 +20,18 @@ export class GravityFormComponent implements OnInit {
    // this.loadForm();
   }
 
-  // loadForm() {
-  //   this.gravityFormService.getForm(this.formId).subscribe(
-  //     (response) => {
-  //       console.log('Form retrieved successfully:', response);
-  //       // Handle form retrieval
-  //     },
-  //     (error) => {
-  //       console.error('Error retrieving form:', error);
-  //       // Handle error retrieving form
-  //     }
-  //   );
-  // }
+  loadForm() {
+    this.gravityFormService.getForm(this.formId).subscribe(
+      (response:any) => {
+        console.log('Form retrieved successfully:', response);
+        // Handle form retrieval
+      },
+      (error:any) => {
+        console.error('Error retrieving form:', error);
+        // Handle error retrieving form
+      }
+    );
+  }
 
   onSubmit() {
     this.gravityFormService.submitForm(this.formData).subscribe(
