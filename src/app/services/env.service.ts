@@ -24,8 +24,8 @@ export class EnvService {
   // Woocommerce products and single with keys
   product_single_url = 'http://localhost/webwarrior/wp-json/wc/v3/products'
   products_base_url = 'http://localhost/webwarrior/wp-json/wc/v3/products?'
-  ck = 'ck_your_consumer_key';
-  cs = 'cs_your_cosnumer_secret';
+  ck = 'ck_';
+  cs = 'cs_';
 
   PRODUCT_API_URL = `${this.products_base_url}consumer_key=${this.ck}&consumer_secret=${this.cs}`;
 
