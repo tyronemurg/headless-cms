@@ -19,6 +19,8 @@ import { SampleComponent } from './pages/sample/sample.component';
 import { GravityFormComponent } from './pages/gravity-form/gravity-form.component';
 import { FormsModule } from '@angular/forms';
 import { SidebarComponent } from './partials/sidebar/sidebar.component'; 
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -43,7 +45,8 @@ import { SidebarComponent } from './partials/sidebar/sidebar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
