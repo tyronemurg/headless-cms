@@ -41,7 +41,7 @@ export class GravityFormComponent implements OnInit {
 
   onSubmit() {
     if (this.form.valid) {
-      this.gravityFormService.submitForm(this.form.value).subscribe(
+      this.gravityFormService.submitForm(this.formId, this.form.value).subscribe(
         response => {
           console.log('Form submitted successfully:', response);
         },
